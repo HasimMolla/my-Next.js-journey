@@ -36,7 +36,7 @@ const musicSchoolTestimonials = [
 
 export const TestomonialCards = () => {
     return (
-      <div className="h-[30rem] w-full rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.2]  items-center justify-center relative overflow-hidden">
+      <div className="min-h-[30rem] w-full rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.2]  items-center justify-center relative overflow-hidden">
         <h2 className="text-center mb-8 text-3xl font-bold ">
           Hear Our harmonious: Voices of success
         </h2>

@@ -34,7 +34,7 @@ const musicSchoolContent = [
 ];
 export const WhyChooseUs = () => {
   return (
-    <div className="overflow-hidden">
+    <div className=" w-full ">
       <StickyScroll content={musicSchoolContent} />
     </div>
   );
