@@ -1,4 +1,5 @@
 import { FeaturedCourses } from "@/components/FeaturedCourses";
+import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { OurInstructer } from "@/components/OurInstructer";
 import { TestomonialCards } from "@/components/TestomonialCards";
@@ -13,7 +14,8 @@ export default function Home() {
       <WhyChooseUs />
       <TestomonialCards />
       <UpcommingWebiner />
-      <OurInstructer/>
+      <OurInstructer />
+ 
     </main>
   );
 }
