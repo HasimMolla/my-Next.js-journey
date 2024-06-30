@@ -1,9 +1,18 @@
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import Link from "next/link";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
+import { Phone, ShoppingBasket } from "lucide-react";
+import { Button } from "../ui/button";
 
 export default function Header() {
   return (
     <header className="bg-white">
-      <nav className="container mx-auto  py-5">
+      <nav className="container max-w-screen-xl mx-auto  py-5 flex justify-between items-center">
         <div className="flex items-center gap-x-4">
           <svg
             data-testid="logo"
@@ -25,8 +34,6 @@ export default function Header() {
               fill="#484848"
             />
           </svg>
-       
-     
           <Select>
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select Restaurant" />
@@ -37,6 +44,33 @@ export default function Header() {
               <SelectItem value="kids-corner">Kids corner</SelectItem>
             </SelectContent>
           </Select>
+        </div>
+        <div className="flex items-center gap-x-4">
+          <ul className="flex items-center font-medium gap-x-4">
+            <li>
+              <Link className="hover:text-primary transition-colors" href={"/"}>
+                Menu
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-primary transition-colors" href={"/"}>
+                Orders
+              </Link>
+            </li>
+          </ul>
+          <div className="relative">
+            <Link href={"/cart"}>
+              <ShoppingBasket className="hover:text-primary transition-colors" />
+            </Link>
+            <span className="absolute -top-4 -right-4 h-5 w-5 flex items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">
+              3
+            </span>
+          </div>
+          <div className="flex items-center ml-12">
+            <Phone />
+            <span className="text-base font-medium">+91 9800 098 998</span>
+          </div>
+          <Button size={"sm"} className="font-medium">Logout</Button>
         </div>
       </nav>
     </header>
